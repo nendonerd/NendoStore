@@ -1,0 +1,32 @@
+{
+  "name": "nendo-store",
+  "version": "0.0.1",
+  "description": "Trying to build a fullstack store by using a minimal amount of 3rd party shits.",
+  "main": "index.js",
+  "scripts": {
+    "test": "<empty>"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/nendonerd/NendoStore.git"
+  },
+  "keywords": [
+    "nendoroid",
+    "|",
+    "store",
+    "|",
+    "vue",
+    "|",
+    "nodejs",
+    "|",
+    "mongodb",
+    "|",
+    "puppeteer"
+  ],
+  "author": "nendonerd",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/nendonerd/NendoStore/issues"
+  },
+  "homepage": "https://github.com/nendonerd/NendoStore#readme"
+}
