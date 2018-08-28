@@ -94,7 +94,13 @@ e.on('status', () => {
   let callback = () => {
     drawRow('SERVER  STATUS')
     console.log('')
-    console.log('NODE PID:'.padStart(15, ' ').padEnd(50, ' ') + config.pid)
+
+    for (let key in config) {
+      if (config.hasOwnProperty(key)) {
+        console.log(key.padEnd(40, ' ') + config[key])
+      }
+    }
+
     console.log('')
     drawRow(`${new Date().toDateString()}`)
   }

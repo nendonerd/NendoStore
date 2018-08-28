@@ -7,7 +7,8 @@ module.exports = env => {
         hostname: "https://nendo.ml",
         httpPort: 80,
         httpsPort: 443,
-        pid: ''
+        pid: '',
+        static: './static'
 
       }
       break;
@@ -17,7 +18,9 @@ module.exports = env => {
         isHttps: false,
         hostname: "http://localhost:8005",
         httpPort: 8005,
-        pid: ''
+        httpsPort: 8006,
+        pid: '',
+        static: './static'
       }
   }
 }

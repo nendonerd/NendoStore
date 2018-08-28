@@ -39,7 +39,7 @@ const server = (req, res) => {
   };
 
   // routing logic
-  let isExist = fs.existsSync(`.${pathname}`);
+  let isExist = fs.existsSync(`${config.static}${pathname}`);
 
   if (!routing(pathname, req, res)) {
     if (!isExist) {
@@ -49,12 +49,12 @@ const server = (req, res) => {
 
     } else {
 
-      fs.readFile(`.${pathname}`, (err, data) => {
+      fs.readFile(`${config.static}${pathname}`, (err, data) => {
         if (err) {
           res.statusCode = 500;
           res.end(`Error getting the file: ${err}`);
         } else {
-          let ext = path.parse(`.${pathname}`).ext;
+          let ext = path.parse(`${config.static}${pathname}`).ext;
           res.setHeader("Content-type", contentTypes[ext] || "text/plain");
           res.end(data);
         }
