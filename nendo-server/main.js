@@ -80,8 +80,8 @@ if (config.isHttps) {
 
 
   const serverOpts = {
-    cert: fs.readFileSync(__dirname + "/cert/fullchain.pem"),
-    key: fs.readFileSync(__dirname + "/cert/privkey.pem")
+    cert: fs.readFileSync(config.certPath + "fullchain.pem"),
+    key: fs.readFileSync(config.certPath + "privkey.pem")
   };
 
   https.createServer(serverOpts, server).listen(config.httpsPort);

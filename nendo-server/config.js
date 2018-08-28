@@ -8,8 +8,8 @@ module.exports = env => {
         httpPort: 80,
         httpsPort: 443,
         pid: '',
-        static: './static'
-
+        static: './static',
+        certPath: '/etc/letsencrypt/live/nendo.ml/'
       }
       break;
     default:
@@ -20,7 +20,8 @@ module.exports = env => {
         httpPort: 8005,
         httpsPort: 8006,
         pid: '',
-        static: './static'
+        static: './static',
+        certPath: './cert/'
       }
   }
 }
